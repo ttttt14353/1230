@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>自己紹介 | taka。's VRC Cafe</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="profile-page">
+  <nav class="navbar">
+    <button id="menu-toggle">≡ メニュー</button>
+    <div id="menu" class="menu hidden">
+      <a href="/">🏠 ホーム</a>
+      <a href="/profile">👤 自己紹介</a>
+      <a href="/gallery">📸 写真ページ</a>
+      <a href="/videos">📹 動画ページ</a>
+    </div>
+  </nav>
+
+  <div class="intro-card">
+    <div class="intro-avatar">
+      <img src="{{ url_for('static', filename='images/avatar.png') }}" alt="アバター画像">
+    </div>
+    <div class="intro-text">
+      <h2>taka。</h2>
+      <p>
+        こんにちは、taka。です！<br>
+        VRCでのんびり活動しています。<br>
+        よくプラべにこもってピアノを弾いています🎹✨<br>
+        気軽にXもフォローしてください！<br>
+        使用アバター：まめひなた、しなの<br>
+        
+      </p>
+      <a href="https://x.com/8Qf5UqIHNt90288" class="twitter-button" target="_blank">Xを見る</a>
+    </div>
+  </div>
+
+  <script defer src="{{ url_for('static', filename='js/menu.js') }}"></script>
+</body>
+</html>
