@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>写真ギャラリー</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="gallery-page">
+
+  <nav class="navbar">
+    <button id="menu-toggle">≡ メニュー</button>
+    <div id="menu" class="menu">
+      <a href="/">🏠 ホーム</a>
+      <a href="/profile">👤 自己紹介</a>
+      <a href="/gallery">📸 写真ページ</a>
+      <a href="/videos">📹 動画ページ</a>
+    </div>
+  </nav>
+
+  <h1 class="section-title">📷 写真ギャラリー</h1>
+
+  <div class="gallery-grid">
+    {% for image in images %}
+      <img src="{{ url_for('static', filename='images/gallery/' + image) }}" alt="photo" class="gallery-thumb">
+    {% endfor %}
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+
+  <script defer src="{{ url_for('static', filename='js/menu.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+</body>
+</html>
