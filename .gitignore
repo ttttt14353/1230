@@ -1,3 +1,2 @@
-# 大きな動画はGitに含めない
 static/videos/*.mp4
 static/images/gallery.zip
